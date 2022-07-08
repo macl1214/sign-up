@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(32, 31, 31);
+}
+
+.container {
+  background-color: #fff;
+  width: 1100px;
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.side-banner {
+  width: 35%;
+
+  position: relative;
+}
+
+.side-banner > .logo {
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+
+  width: 100%;
+  text-align: center;
+  
+  background-color: rgba(78, 78, 78, 0.3);
+  padding: 6px 16px;
+  font-size: 50px;
+}
+
+.image {
+  position: relative;
+  height: 100%;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+}
+
+.image > img {
+  /* height: 100%; */
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  
+  background-color: rgb(241, 241, 241);
+
+  font-family: 'Raleway', 'open-sans';
+}
+
+.content .top-content {
+  height: 35%;
+  width: 80%;
+  padding: 0 0 40px 24px;
+
+  display: flex;
+  align-items: flex-end;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.content .login-section {
+  height: 30%;
+  padding: 16px 24px;
+  background-color: #fff;
+
+}
+
+.login-section h1 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.content .login-form {
+  width: 60%;
+  height: 100%;
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr auto;
+  column-gap: 80px;
+  row-gap: 10px;
+}
+
+.login-form .form-entry {
+  display: flex;
+  flex-direction: column;
+  
+  height: 100%;
+
+  font-size: 0.8rem;
+}
+
+.form-entry input {
+  padding: 4px 8px;
+  border: 1px rgb(228, 228, 228) solid;
+  border-radius: 3px;
+}
+
+.form-entry input:focus {
+  border: 1px #1e65ff solid;
+  background-color: #f8f8f8;
+  outline: none;
+}
+
+.form-entry input:invalid {
+  border: 1px red solid;
+}
+
+.login-form .submit-section {
+  position: absolute;
+  bottom: -80px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-size: 0.7rem;
+}
+
+.submit-section button {
+  padding: 8px 16px;
+  
+  background-color: #596D48;
+  color: white;
+  
+  width: 9rem;
+
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px black;
+}
+
+.submit-section .login-msg a {
+  font-style: none;
+  color: #596D48;
+}
