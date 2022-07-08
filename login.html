@@ -44,27 +44,34 @@
         <form class="login-form">
           <div class="form-entry">
             <label for="first_name">FIRST NAME</label>
-            <input type="text" name="first_name" id="first_name">
+            <input type="text" name="first_name" id="first_name"
+                   placeholder=" " required>
           </div>
           <div class="form-entry">
             <label for="last_name">LAST NAME</label>
-            <input type="text" name="last_name" id="last_name">
+            <input type="text" name="last_name" id="last_name"
+                   placeholder=" " required>
           </div>
           <div class="form-entry">
             <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email"
+                   placeholder=" " required>
           </div>
           <div class="form-entry">
             <label for="ph_number">PHONE NUMBER</label>
-            <input type="tel" name="ph_number" id="ph_number" pattern="(\d{3})-(\d{3})-(\d{4})">
+            <input type="tel" name="ph_number" id="ph_number" 
+                   placeholder=" " required 
+                   pattern="(\d{3})-(\d{3})-(\d{4})">
           </div>
           <div class="form-entry">
             <label for="password">PASSWORD</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" 
+                   placeholder=" " required>
           </div>
           <div class="form-entry">
             <label for="matching_password">CONFIRM PASSWORD</label>
-            <input type="password" name="matching_password" id="matching_password">
+            <input type="password" name="matching_password" id="matching_password" 
+                   placeholder=" " required>
           </div>
           <div class="submit-section">
             <button type="submit">Create Account</button>
@@ -74,8 +81,13 @@
           </div>
         </form>
       </div>
+      <div class="bottom-section">
+
+      </div>
     </main>
   </div>
+
+  <script src="js/login.js"></script>
 </body>
 
 </html>

@@ -1,17 +1,60 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   background: rgb(32, 31, 31);
+  height: 100vh;
 }
 
 .container {
   background-color: #fff;
   width: 1100px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
 
   display: flex;
@@ -19,6 +62,7 @@ body {
 
 .side-banner {
   width: 35%;
+  height: 100%;
 
   position: relative;
 }
@@ -39,6 +83,12 @@ body {
 .image {
   position: relative;
   height: 100%;
+  width: 100%;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
 }
 
 figcaption {
@@ -46,14 +96,14 @@ figcaption {
   bottom: 0;
 }
 
-.image > img {
-  /* height: 100%; */
-  width: 100%;
-  height: 100%;
+figcaption a {
+  font-style: none;
+  color: black;
 }
 
 .content {
   width: 65%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   
@@ -79,11 +129,12 @@ figcaption {
   padding: 16px 24px;
   background-color: #fff;
 
+  font-size: 0.8rem;
 }
 
 .login-section h1 {
-  font-size: 1.2rem;
   margin-bottom: 15px;
+  font-size: 0.8rem;;
 }
 
 .content .login-form {
@@ -104,8 +155,6 @@ figcaption {
   flex-direction: column;
   
   height: 100%;
-
-  font-size: 0.8rem;
 }
 
 .form-entry input {
@@ -120,7 +169,12 @@ figcaption {
   outline: none;
 }
 
-.form-entry input:invalid {
+.form-entry input:not(:placeholder-shown):invalid {
+  border: 1px red solid;
+}
+
+.error {
+  border: none;
   border: 1px red solid;
 }
 
@@ -151,4 +205,8 @@ figcaption {
 .submit-section .login-msg a {
   font-style: none;
   color: #596D48;
+}
+
+.bottom-section {
+  height: 35%;
 }
