@@ -140,7 +140,8 @@ figcaption > a {
 
 .login-section h1 {
   margin-bottom: 15px;
-  font-size: 0.8rem;;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .content .login-form {
